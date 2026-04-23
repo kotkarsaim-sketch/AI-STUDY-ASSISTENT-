@@ -1,0 +1,159 @@
+# 🧠 AI Study Assistant
+
+<p align="center">
+  <img src="public/logo.png" alt="AI Study Assistant Logo" width="200" />
+</p>
+
+<p align="center">
+  <strong>Upload your notes or PDFs — get instant summaries, quizzes, and flashcards.</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" />
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs Welcome" />
+</p>
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 📄 **Smart Upload** | Drag-and-drop PDFs or paste your notes directly — text is extracted instantly on the client side |
+| 📝 **AI Summaries** | Automatically generates concise, extractive summaries from your uploaded content |
+| ❓ **Quiz Generation** | Creates multiple-choice quizzes from your material with instant scoring and feedback |
+| 🃏 **Flashcards** | Produces interactive flip-cards for active recall — the gold standard of studying |
+| 🌙 **Dark Mode Design** | Premium dark-mode-first UI with glassmorphism, gradients, and micro-animations |
+| 📱 **Fully Responsive** | Looks great on desktop, tablet, and mobile devices |
+| 🔒 **Privacy First** | All processing happens in your browser — your notes never leave your device |
+
+---
+
+## 🖼️ Screenshots
+
+> _Screenshots will be added after the first build._
+
+| Landing Page | Upload | Results Dashboard |
+|---|---|---|
+| ![Landing](public/screenshots/landing.png) | ![Upload](public/screenshots/upload.png) | ![Results](public/screenshots/results.png) |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** ≥ 18.x — [Download here](https://nodejs.org/)
+- **npm** ≥ 9.x (bundled with Node.js)
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/ai-study-assistant.git
+cd ai-study-assistant
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
+
+### Production Build
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🏗️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| **Framework** | [Next.js 15](https://nextjs.org/) (App Router) |
+| **UI** | React 19, Vanilla CSS, CSS Modules |
+| **PDF Parsing** | [pdf.js](https://mozilla.github.io/pdf.js/) (`pdfjs-dist`) |
+| **Fonts** | [Inter](https://fonts.google.com/specimen/Inter) + [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) |
+| **Icons** | Lucide React |
+| **Animations** | CSS Keyframes & Transitions |
+
+---
+
+## 📁 Project Structure
+
+```
+ai-study-assistant/
+├── public/                  # Static assets (logo, images)
+├── src/
+│   ├── app/
+│   │   ├── layout.js        # Root layout with fonts & metadata
+│   │   ├── globals.css       # Design system & global styles
+│   │   ├── page.js           # Landing / Home page
+│   │   ├── upload/
+│   │   │   └── page.js       # Upload page (drag-and-drop + paste)
+│   │   └── results/
+│   │       └── page.js       # Results dashboard (summary, quiz, flashcards)
+│   ├── components/
+│   │   ├── Navbar.js         # Navigation bar
+│   │   ├── Footer.js         # Footer
+│   │   ├── FileUploader.js   # Drag-and-drop file uploader
+│   │   ├── TabSwitcher.js    # Animated tab bar
+│   │   ├── SummaryView.js    # Summary display
+│   │   ├── QuizCard.js       # Quiz MCQ card
+│   │   ├── Flashcard.js      # 3D flip flashcard
+│   │   └── LoadingSpinner.js # Loading animation
+│   └── context/
+│       └── StudyContext.js    # React Context for shared state
+├── package.json
+└── README.md
+```
+
+---
+
+## 🎯 How It Works
+
+```
+┌──────────────┐     ┌──────────────────┐     ┌────────────────────┐
+│  Upload PDF  │ ──> │  Extract Text    │ ──> │  Generate Results  │
+│  or Notes    │     │  (Client-side)   │     │  Summary / Quiz /  │
+│              │     │                  │     │  Flashcards        │
+└──────────────┘     └──────────────────┘     └────────────────────┘
+```
+
+1. **Upload** — Drop a PDF file or paste your notes into the text area.
+2. **Extract** — Text is extracted from the PDF entirely in the browser using `pdf.js`.
+3. **Generate** — The app analyzes the text and produces:
+   - A **summary** highlighting the most important sentences
+   - A **quiz** with multiple-choice questions based on the content
+   - **Flashcards** pairing key terms with their definitions
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  Made with ❤️ for students everywhere
+</p>
