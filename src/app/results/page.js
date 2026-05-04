@@ -8,6 +8,8 @@ import TabSwitcher from '@/components/TabSwitcher';
 import SummaryView from '@/components/SummaryView';
 import QuizCard from '@/components/QuizCard';
 import Flashcard from '@/components/Flashcard';
+import QAChat from '@/components/QAChat';
+import StudyDashboard from '@/components/StudyDashboard';
 import { Upload, FileX } from 'lucide-react';
 
 export default function ResultsPage() {
@@ -63,6 +65,12 @@ export default function ResultsPage() {
           )}
           {activeTab === 'flashcards' && (
             <Flashcard flashcards={flashcards} />
+          )}
+          {activeTab === 'ask' && (
+            <QAChat />
+          )}
+          {activeTab === 'dashboard' && (
+            <StudyDashboard />
           )}
         </div>
 
